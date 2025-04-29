@@ -1,0 +1,119 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #393E46;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box; /* Add this to include padding in width calculation */
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navbar links */
+.nav-links {
+    display: flex; /* Add this to create a flex container for links */
+    flex-wrap: nowrap; /* Ensure links stay in a row */
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 5px 10px; /* Add some padding for better spacing */
+}
+
+/* Add responsive behavior for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+
+    .nav-links a {
+        margin: 5px 10px 5px 0; /* Adjust margins for wrapped items */
+    }
+}
+
+.logo {
+    color: white;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #EFEEEA;
+    text-align: center;
+    padding: 8rem 2rem 5rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
