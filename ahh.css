@@ -57,6 +57,59 @@ body {
 
 //darkmode
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+}
+
+/* Optional styling for the toggle switch */
+.toggle-switch {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.toggle-switch input {
+  display: none;
+}
+.toggle-switch .slider {
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  display: inline-block;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.toggle-switch .slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: white;
+  top: 1px;
+  left: 1px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.toggle-switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+.toggle-switch input:checked + .slider {
+  background: #333;
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #121212;
