@@ -16,27 +16,6 @@
     box-sizing: border-box;
     font-family: 'IBM Plex Sans', 'Cascadia Code', sans-serif;
 }
-/* Default (Light) Mode */
-:root {
-  --bg-color: #ffffff;
-  --text-color: #121212;
-  --primary-color: #007bff;
-  --secondary-color: #f0f0f0;
-}
-
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Dark Mode */
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #f5f5f5;
-  --primary-color: #66b2ff;
-  --secondary-color: #1e1e1e;
-}
 
 body {
     background-color: var(--white);
