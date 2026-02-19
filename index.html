@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tagesschrift&display=swap" rel="stylesheet">
-    <title>Rohit - Data Analyst | Python Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+    <title>Rohit &mdash; Data Analyst | Python Developer</title>
     <link rel="stylesheet" href="ahh.css">
 </head>
 <body>
+
+<!-- Nav overlay for mobile -->
+<div class="nav-overlay" id="navOverlay"></div>
 
 <!-- Navbar -->
 <nav class="navbar">
@@ -17,11 +20,23 @@
         <div class="logo">
             Ro<span>hit</span>
         </div>
-        <div class="nav-links">
+
+        <!-- Hamburger (mobile only) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
             <a href="#about">About</a>
             <a href="#portfolio">Portfolio</a>
             <a href="vista.html">Vista</a>
             <a href="#contact">Contact</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="icon-moon">&#9789;</span>
+                <span class="icon-sun">&#9788;</span>
+            </button>
         </div>
     </div>
 </nav>
@@ -49,24 +64,23 @@
 <!-- About Section -->
 <section id="about" class="section">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
             <h2>About Me</h2>
             <div class="underline"></div>
         </div>
-        <div class="about-content">
+        <div class="about-content reveal">
             <div class="about-image">
                 <div class="image-container">
-                    <!-- Replace with your actual image -->
                     <img src="IMG_-77er7q-01.JPEG" alt="Rohit's Profile Picture">
                 </div>
             </div>
             <div class="about-text">
                 <p>Python developer</p>
 
-                <p>I began my technical journey with a degree in Computer Science, which I followed with specialized training in data analytics at MCGI Pvt Ltd. There, I collaborated on a range of projects under the mentorship of industry professionals. Since then, I’ve worked across multiple industries, delivering custom Python solutions and building end-to-end data analysis frameworks.</p>
+                <p>I began my technical journey with a degree in Computer Science, which I followed with specialized training in data analytics at MCGI Pvt Ltd. There, I collaborated on a range of projects under the mentorship of industry professionals. Since then, I've worked across multiple industries, delivering custom Python solutions and building end-to-end data analysis frameworks.</p>
 
                 <div class="skills">
-                    <h3>Skills & Technologies</h3>
+                    <h3>Skills &amp; Technologies</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">SQL</span>
@@ -78,13 +92,13 @@
                         <span class="skill-tag">Hugging Face</span>
                         <span class="skill-tag">Data Visualization</span>
                         <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">HTML & CSS</span>
+                        <span class="skill-tag">HTML &amp; CSS</span>
                         <span class="skill-tag">Strategy</span>
                         <span class="skill-tag">Power BI</span>
                         <span class="skill-tag">NumPy</span>
                         <span class="skill-tag">Databricks</span>
                         <span class="skill-tag">DataDog</span>
-                        <span class="skill-tag">Apache-Airflow</span>
+                        <span class="skill-tag">Apache Airflow</span>
                     </div>
                 </div>
             </div>
@@ -95,19 +109,16 @@
 <!-- Portfolio Section -->
 <section id="portfolio" class="section bg-light">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
             <h2>My Portfolio</h2>
             <div class="underline"></div>
         </div>
-        <div class="portfolio-filters">
+        <div class="portfolio-filters reveal">
             <button class="filter-btn active" data-filter="all">All Projects</button>
-<!--            <button class="filter-btn" data-filter="data-analysis">Data Analysis</button>-->
-<!--            <button class="filter-btn" data-filter="python">Python Development</button>-->
-<!--            <button class="filter-btn" data-filter="visualization">Data Visualization</button>-->
         </div>
         <div class="portfolio-grid">
             <!-- Project Card 1 -->
-            <div class="portfolio-item" data-category="data-analysis visualization">
+            <div class="portfolio-item reveal" data-category="data-analysis visualization">
                 <div class="portfolio-card">
                     <div class="portfolio-content">
                         <h3>Subtitle Generation using Whisper ASR</h3>
@@ -116,48 +127,29 @@
                             <span>Python</span>
                             <span>OpenAI</span>
                             <span>Speech-to-text</span>
-                            <span>Natural Language Process</span>
+                            <span>NLP</span>
                             <span>Linux</span>
                         </div>
-                        <a href="https://github.com/ro-hits/TranscribeIt--Whisper/tree/master" class="portfolio-link">View Project</a>
+                        <a href="https://github.com/ro-hits/TranscribeIt--Whisper/tree/master" class="portfolio-link" target="_blank" rel="noopener">View Project &rarr;</a>
                     </div>
                 </div>
             </div>
 
             <!-- Project Card 2 -->
-<!--            <div class="portfolio-item" data-category="python">-->
-<!--                <div class="portfolio-card">-->
-<!--                    <div class="portfolio-content">-->
-<!--                        <h3>NL</h3>-->
-<!--                        <p></p>-->
-<!--                        <div class="portfolio-tags">-->
-<!--                            <span>Python</span>-->
-<!--                            <span>Automation</span>-->
-<!--                            <span>ETL</span>-->
-<!--                            <span>Youtube Data api V3</span>-->
-<!--                            <span>Sentiment Analysis</span>-->
-<!--                            <span>NLP</span>-->
-<!--                        </div>-->
-<!--                        <a href="#" class="portfolio-link">View Project</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-            <!-- Project Card 3 -->
-            <div class="portfolio-item" data-category="data-analysis visualization">
+            <div class="portfolio-item reveal" data-category="data-analysis visualization">
                 <div class="portfolio-card">
                     <div class="portfolio-content">
                         <h3>Real-Time Ride-Hailing Analytics</h3>
-                        <p>Simulate or stream real-time ride data—including pickup and drop-off times, locations, and fare amounts—using Python libraries and open-source tools. The data stream can emulate a ride-hailing platform like Uber, generating events in real time for ingestion into a processing pipeline (e.g., using Kafka, Apache Beam, or Spark Streaming) to support analytics, dashboards, or machine learning workflows.</p>
+                        <p>Simulate or stream real-time ride data &mdash; including pickup and drop-off times, locations, and fare amounts &mdash; using Python libraries and open-source tools. The data stream emulates a ride-hailing platform, generating events in real time for ingestion into a processing pipeline to support analytics, dashboards, or ML workflows.</p>
                         <div class="portfolio-tags">
                             <span>Python</span>
                             <span>ML</span>
                             <span>Statistics</span>
-                            <span>Numpy</span>
+                            <span>NumPy</span>
                             <span>Analytics</span>
                             <span>GCP</span>
                         </div>
-                        <a href="#" class="portfolio-link">View Project</a>
+                        <a href="#" class="portfolio-link">View Project &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -168,17 +160,17 @@
 <!-- Contact Section -->
 <section id="contact" class="section">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
             <h2>Get In Touch</h2>
             <div class="underline"></div>
         </div>
 
         <div class="contact-content">
-            <div class="contact-text">
+            <div class="contact-text reveal">
                 <p>Thank you for visiting my portfolio. I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out through any of the channels below.</p>
             </div>
 
-            <div class="contact-methods">
+            <div class="contact-methods reveal">
                 <div class="contact-card">
                     <div class="contact-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -203,31 +195,31 @@
                     </div>
                     <div class="contact-info">
                         <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/rohit-kp-891236157/" target="_blank">linkedin.com/in/rohit</a>
+                        <a href="https://www.linkedin.com/in/rohit-kp-891236157/" target="_blank" rel="noopener">linkedin.com/in/rohit</a>
                         <p>Connect with me professionally</p>
                     </div>
                 </div>
             </div>
 
-            <div class="social-links-container">
+            <div class="social-links-container reveal">
                 <h3>Find Me On</h3>
                 <div class="social-links">
-                    <a href="https://github.com/ro-hits" target="_blank" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <a href="https://github.com/ro-hits" target="_blank" rel="noopener" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
                         GitHub
                     </a>
-                    <a href="https://medium.com/@rohitkp9645" target="_blank" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <a href="https://medium.com/@rohitkp9645" target="_blank" rel="noopener" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                             <polyline points="15 3 21 3 21 9"></polyline>
                             <line x1="10" y1="14" x2="21" y2="3"></line>
                         </svg>
                         Medium
                     </a>
-                    <a href="https://stackoverflow.com/users/22597420/rohit-kp" target="_blank" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <a href="https://stackoverflow.com/users/22597420/rohit-kp" target="_blank" rel="noopener" class="social-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                             <polyline points="15 3 21 3 21 9"></polyline>
                             <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -245,12 +237,99 @@
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">Rohit</div>
-            <p>Data Engineer & Python Developer</p>
-            <p class="copyright">© 2025 Rohit. All rights reserved.</p>
+            <p>Data Engineer &amp; Python Developer</p>
+            <p class="copyright">&copy; 2025 Rohit. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
+<script>
+    // ========== DARK MODE ==========
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+
+    // Check saved preference or OS preference
+    function getPreferredTheme() {
+        const saved = localStorage.getItem('theme');
+        if (saved) return saved;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function setTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }
+
+    // Apply on load (before paint, ideally)
+    setTheme(getPreferredTheme());
+
+    themeToggle.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme');
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // ========== HAMBURGER MENU ==========
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const navOverlay = document.getElementById('navOverlay');
+
+    function toggleMenu() {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        navOverlay.classList.toggle('open');
+        document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', toggleMenu);
+
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('open')) toggleMenu();
+        });
+    });
+
+    // ========== SCROLL REVEAL ==========
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ========== ACTIVE NAV LINK ==========
+    const sections = document.querySelectorAll('section[id]');
+
+    function updateActiveLink() {
+        const scrollY = window.scrollY + 120;
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            const id = section.getAttribute('id');
+            const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+            if (link) {
+                if (scrollY >= top && scrollY < top + height) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+    updateActiveLink();
+</script>
 
 </body>
 </html>
