@@ -207,7 +207,7 @@
 
     // Text sizer
     const SIZES = [87.5, 100, 112.5, 125, 137.5];
-    let sizeIndex = parseInt(localStorage.getItem('textSize') || '1');
+    let sizeIndex = parseInt(localStorage.getItem('textSize') ?? '2');
 
     function applySize() {
         document.documentElement.style.fontSize = SIZES[sizeIndex] + '%';
