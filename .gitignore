@@ -1,0 +1,19 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python (not needed but just in case)
+__pycache__/
+*.pyc
+.env
+venv/
+
+# Misc
+*.log
