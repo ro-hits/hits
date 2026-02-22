@@ -31,13 +31,23 @@
 /* ============================================
    RESET
    ============================================ */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    font-family: 'Source Serif 4', 'Georgia', serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     background: var(--bg);
     color: var(--text-secondary);
+    font-size: 1.08rem;
     line-height: 1.75;
     transition: background 0.3s, color 0.3s;
     -webkit-font-smoothing: antialiased;
@@ -62,7 +72,9 @@ body {
    ============================================ */
 .nav {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background: var(--nav-bg);
     backdrop-filter: blur(12px);
@@ -79,7 +91,7 @@ body {
 }
 
 .nav-name {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text);
@@ -94,8 +106,8 @@ body {
 }
 
 .nav-right a {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.82rem;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 0.88rem;
     color: var(--text-muted);
     text-decoration: none;
     letter-spacing: 0.02em;
@@ -118,11 +130,25 @@ body {
     transition: color 0.2s;
 }
 
-.theme-btn:hover { color: var(--text); }
-.theme-btn .sun { display: none; }
-.theme-btn .moon { display: inline; }
-[data-theme="dark"] .theme-btn .sun { display: inline; }
-[data-theme="dark"] .theme-btn .moon { display: none; }
+.theme-btn:hover {
+    color: var(--text);
+}
+
+.theme-btn .sun {
+    display: none;
+}
+
+.theme-btn .moon {
+    display: inline;
+}
+
+[data-theme="dark"] .theme-btn .sun {
+    display: inline;
+}
+
+[data-theme="dark"] .theme-btn .moon {
+    display: none;
+}
 
 /* Mobile menu */
 .hamburger {
@@ -143,15 +169,53 @@ body {
     transition: all 0.25s;
 }
 
-.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}
 
 /* ============================================
    HERO
    ============================================ */
 .hero {
     padding: 8rem 0 4rem;
+}
+
+.hero-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-photo {
+    flex-shrink: 0;
+    padding-top: 0.3rem;
+}
+
+.hero-photo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border);
+    transition: border-color 0.3s;
+}
+
+.hero-photo img:hover {
+    border-color: var(--green);
 }
 
 .hero h1 {
@@ -170,8 +234,8 @@ body {
 }
 
 .hero-role {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.82rem;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 0.88rem;
     color: var(--text-muted);
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -179,7 +243,7 @@ body {
 }
 
 .hero-bio {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     color: var(--text-secondary);
     max-width: 520px;
     margin-bottom: 2rem;
@@ -192,8 +256,8 @@ body {
 }
 
 .hero-links a {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.85rem;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 0.92rem;
     color: var(--green);
     text-decoration: none;
     padding-bottom: 1px;
@@ -223,8 +287,8 @@ body {
 }
 
 .section-label {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.78rem;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 0.82rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -233,7 +297,7 @@ body {
 }
 
 .about p {
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-bottom: 1.2rem;
     color: var(--text-secondary);
 }
@@ -246,8 +310,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.82rem;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 0.88rem;
     color: var(--text-muted);
     line-height: 2;
 }
@@ -290,7 +354,7 @@ body {
 
 .project-title {
     font-family: 'Source Serif 4', serif;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--text);
     margin-bottom: 0.4rem;
@@ -308,15 +372,15 @@ body {
 }
 
 .project-desc {
-    font-size: 0.93rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     margin-bottom: 0.6rem;
     line-height: 1.65;
 }
 
 .project-meta {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.75rem;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 0.82rem;
     color: var(--text-muted);
     letter-spacing: 0.01em;
 }
@@ -329,7 +393,7 @@ body {
 }
 
 .contact p {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
     margin-bottom: 2rem;
 }
@@ -344,8 +408,8 @@ body {
     display: flex;
     align-items: center;
     gap: 0.45rem;
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.84rem;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 0.9rem;
     color: var(--text-muted);
     text-decoration: none;
     padding: 0.45rem 0.9rem;
@@ -386,7 +450,7 @@ body {
 .sizer-btn {
     background: none;
     border: none;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 0.72rem;
     font-weight: 600;
     color: var(--text-muted);
@@ -416,7 +480,7 @@ body {
 }
 
 .footer p {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
     font-size: 0.75rem;
     color: var(--text-muted);
     text-align: center;
@@ -440,12 +504,16 @@ body {
    RESPONSIVE
    ============================================ */
 @media (max-width: 640px) {
-    .hamburger { display: flex; }
+    .hamburger {
+        display: flex;
+    }
 
     .nav-right {
         position: fixed;
-        top: 0; right: -100%;
-        width: 220px; height: 100vh;
+        top: 0;
+        right: -100%;
+        width: 220px;
+        height: 100vh;
         background: var(--bg);
         flex-direction: column;
         justify-content: center;
@@ -453,29 +521,58 @@ body {
         gap: 1.8rem;
         transition: right 0.3s;
         z-index: 150;
-        box-shadow: -4px 0 20px rgba(0,0,0,0.08);
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
     }
 
     [data-theme="dark"] .nav-right {
-        box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
     }
 
-    .nav-right.open { right: 0; }
-    .nav-right a { font-size: 0.95rem; }
+    .nav-right.open {
+        right: 0;
+    }
+
+    .nav-right a {
+        font-size: 0.95rem;
+    }
 
     .nav-overlay {
         position: fixed;
         inset: 0;
-        background: rgba(0,0,0,0.35);
+        background: rgba(0, 0, 0, 0.35);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s;
         z-index: 140;
     }
-    .nav-overlay.open { opacity: 1; visibility: visible; }
 
-    .hero { padding: 7rem 0 3rem; }
-    .hero h1 { font-size: 2.2rem; }
+    .nav-overlay.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .hero {
+        padding: 7rem 0 3rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-row {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .hero-links {
+        justify-content: center;
+    }
+
+    .hero-photo img {
+        width: 64px;
+        height: 64px;
+    }
 
     .contact-row-grid {
         gap: 0.6rem;
