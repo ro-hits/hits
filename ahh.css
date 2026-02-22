@@ -156,10 +156,10 @@ body {
 
 .hero h1 {
     font-family: 'Source Serif 4', serif;
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--text);
-    line-height: 1.2;
+    line-height: 1.15;
     margin-bottom: 0.6rem;
     letter-spacing: -0.03em;
 }
@@ -224,7 +224,7 @@ body {
 
 .section-label {
     font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -290,7 +290,7 @@ body {
 
 .project-title {
     font-family: 'Source Serif 4', serif;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--text);
     margin-bottom: 0.4rem;
@@ -331,44 +331,79 @@ body {
 .contact p {
     font-size: 1rem;
     color: var(--text-secondary);
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
 }
 
-.contact-links {
+.contact-row-grid {
     display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
 }
 
-.contact-row {
+.contact-item {
     display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-    font-size: 0.93rem;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: color 0.2s, border-color 0.2s;
 }
 
-.contact-row .label {
+.contact-item svg {
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.contact-item:hover {
+    color: var(--green);
+    border-color: var(--green);
+}
+
+.contact-item:hover svg {
+    opacity: 1;
+    stroke: var(--green);
+}
+
+/* ============================================
+   TEXT SIZER
+   ============================================ */
+.text-sizer {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.sizer-btn {
+    background: none;
+    border: none;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
     color: var(--text-muted);
-    min-width: 80px;
-    flex-shrink: 0;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    line-height: 1;
+    transition: color 0.2s, background 0.2s;
+    letter-spacing: 0.01em;
 }
 
-.contact-row a {
+.sizer-btn:first-child {
+    border-right: 1px solid var(--border);
+}
+
+.sizer-btn:hover {
     color: var(--green);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 0.88rem;
-}
-
-.contact-row a:hover {
-    border-color: var(--green);
+    background: var(--green-dim);
 }
 
 /* ============================================
@@ -440,14 +475,14 @@ body {
     .nav-overlay.open { opacity: 1; visibility: visible; }
 
     .hero { padding: 7rem 0 3rem; }
-    .hero h1 { font-size: 1.9rem; }
+    .hero h1 { font-size: 2.2rem; }
 
-    .contact-row {
-        flex-direction: column;
-        gap: 0.1rem;
+    .contact-row-grid {
+        gap: 0.6rem;
     }
 
-    .contact-row .label {
-        min-width: unset;
+    .contact-item {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.75rem;
     }
 }
