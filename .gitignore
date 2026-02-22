@@ -18,6 +18,8 @@ id_ecdsa
 id_ecdsa.pub
 id_dsa
 id_dsa.pub
+new_test
+new_test.pub
 *.pem
 *.key
 .ssh/
