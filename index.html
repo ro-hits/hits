@@ -5,302 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
-    <title>Rohit &mdash; Data Analyst | Python Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Rohit &mdash; Python Developer</title>
     <link rel="stylesheet" href="ahh.css">
 </head>
 <body>
 
-<!-- Nav overlay for mobile -->
 <div class="nav-overlay" id="navOverlay"></div>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="container">
-        <div class="logo">
-            Ro<span>hit</span>
-        </div>
-
-        <!-- Hamburger (mobile only) -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
+<!-- Nav -->
+<nav class="nav">
+    <div class="wrap">
+        <a href="#" class="nav-name">Rohit</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
         </button>
-
-        <div class="nav-links" id="navLinks">
+        <div class="nav-right" id="navRight">
             <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#work">Work</a>
             <a href="vista.html">Vista</a>
             <a href="#contact">Contact</a>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <span class="icon-moon">&#9789;</span>
-                <span class="icon-sun">&#9788;</span>
+            <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+                <span class="moon">&#9789;</span>
+                <span class="sun">&#9788;</span>
             </button>
         </div>
     </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <header class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Hi, I'm <span>Rohit</span></h1>
-            <div class="profession">
-                <span>Data Analyst</span>
-                <span class="divider"></span>
-                <span>Python Developer</span>
-            </div>
-            <p class="brief-intro">one in 8 billion</p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn primary">View Projects</a>
-                <a href="#contact" class="btn secondary">Get in Touch</a>
-            </div>
+    <div class="wrap">
+        <h1>Hi, I'm <em>Rohit</em></h1>
+        <div class="hero-role">Data Analyst &middot; Python Developer</div>
+        <p class="hero-bio">I build data pipelines, ML systems, and Python tools. Currently working across competitive intelligence, NLP, and generative AI &mdash; turning messy real-world data into things that actually work.</p>
+        <div class="hero-links">
+            <a href="#work">Projects</a>
+            <a href="#contact">Get in touch</a>
         </div>
     </div>
 </header>
 
+<!-- About -->
+<div class="wrap"><hr class="section-rule"></div>
 
-<!-- About Section -->
-<section id="about" class="section">
-    <div class="container">
-        <div class="section-header reveal">
-            <h2>About Me</h2>
-            <div class="underline"></div>
-        </div>
-        <div class="about-content reveal">
-            <div class="about-image">
-                <div class="image-container">
-                    <img src="IMG_-77er7q-01.JPEG" alt="Rohit's Profile Picture">
-                </div>
-            </div>
-            <div class="about-text">
-                <p>Python developer</p>
+<section id="about" class="about fade-in">
+    <div class="wrap">
+        <div class="section-label">About</div>
+        <p>I began my technical journey with a degree in Computer Science, which I followed with specialized training in data analytics at MCGI Pvt Ltd. There, I collaborated on a range of projects under the mentorship of industry professionals.</p>
+        <p>Since then, I've worked across multiple industries &mdash; delivering custom Python solutions, building end-to-end data analysis frameworks, and shipping ML systems that handle real production workloads.</p>
 
-                <p>I began my technical journey with a degree in Computer Science, which I followed with specialized training in data analytics at MCGI Pvt Ltd. There, I collaborated on a range of projects under the mentorship of industry professionals. Since then, I've worked across multiple industries, delivering custom Python solutions and building end-to-end data analysis frameworks.</p>
-
-                <div class="skills">
-                    <h3>Skills &amp; Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">GCP</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">Hugging Face</span>
-                        <span class="skill-tag">Data Visualization</span>
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">HTML &amp; CSS</span>
-                        <span class="skill-tag">Strategy</span>
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Databricks</span>
-                        <span class="skill-tag">DataDog</span>
-                        <span class="skill-tag">Apache Airflow</span>
-                    </div>
-                </div>
-            </div>
+        <div class="skills-list">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>AWS</span>
+            <span>NLP</span>
+            <span>GCP</span>
+            <span>Docker</span>
+            <span>Bash</span>
+            <span>Hugging Face</span>
+            <span>Machine Learning</span>
+            <span>Data Visualization</span>
+            <span>Power BI</span>
+            <span>NumPy</span>
+            <span>Databricks</span>
+            <span>DataDog</span>
+            <span>Apache Airflow</span>
         </div>
     </div>
 </section>
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="section bg-light">
-    <div class="container">
-        <div class="section-header reveal">
-            <h2>My Portfolio</h2>
-            <div class="underline"></div>
-        </div>
-        <div class="portfolio-filters reveal">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-        </div>
-        <div class="portfolio-grid">
-            <!-- Project Card 1 -->
-            <div class="portfolio-item reveal" data-category="data-analysis visualization">
-                <div class="portfolio-card">
-                    <div class="portfolio-content">
-                        <h3>Subtitle Generation using Whisper ASR</h3>
-                        <p>Utilize the OpenAI Whisper ASR model to seamlessly transcribe videos into precise subtitles with timestamps. Elevate video accessibility by effortlessly generating SubRip (.srt) formatted subtitles with this tool.</p>
-                        <div class="portfolio-tags">
-                            <span>Python</span>
-                            <span>OpenAI</span>
-                            <span>Speech-to-text</span>
-                            <span>NLP</span>
-                            <span>Linux</span>
-                        </div>
-                        <a href="https://github.com/ro-hits/TranscribeIt--Whisper/tree/master" class="portfolio-link" target="_blank" rel="noopener">View Project &rarr;</a>
-                    </div>
-                </div>
-            </div>
+<!-- Projects -->
+<div class="wrap"><hr class="section-rule"></div>
 
-            <!-- Project Card 2 -->
-            <div class="portfolio-item reveal" data-category="data-analysis visualization">
-                <div class="portfolio-card">
-                    <div class="portfolio-content">
-                        <h3>Real-Time Ride-Hailing Analytics</h3>
-                        <p>Simulate or stream real-time ride data &mdash; including pickup and drop-off times, locations, and fare amounts &mdash; using Python libraries and open-source tools. The data stream emulates a ride-hailing platform, generating events in real time for ingestion into a processing pipeline to support analytics, dashboards, or ML workflows.</p>
-                        <div class="portfolio-tags">
-                            <span>Python</span>
-                            <span>ML</span>
-                            <span>Statistics</span>
-                            <span>NumPy</span>
-                            <span>Analytics</span>
-                            <span>GCP</span>
-                        </div>
-                        <a href="#" class="portfolio-link">View Project &rarr;</a>
-                    </div>
-                </div>
-            </div>
+<section id="work" class="projects fade-in">
+    <div class="wrap">
+        <div class="section-label">Work</div>
 
-            <!-- Project Card 3: Competitive Pricing Intelligence -->
-            <div class="portfolio-item reveal" data-category="ml pipeline">
-                <div class="portfolio-card">
-                    <div class="portfolio-content">
-                        <h3>Competitive Pricing Intelligence Pipeline</h3>
-                        <p>End-to-end pipeline for jewelry price comparison across 22+ retailers. Uses OpenCLIP embeddings and FinBERT for semantic product matching, with Playwright-based scraping, category-aware similarity scoring, and rotation strategies for balanced retailer coverage.</p>
-                        <div class="portfolio-tags">
-                            <span>Python</span>
-                            <span>OpenCLIP</span>
-                            <span>FinBERT</span>
-                            <span>Playwright</span>
-                            <span>FAISS</span>
-                            <span>SerpAPI</span>
-                        </div>
-                        <a href="#" class="portfolio-link">View Project &rarr;</a>
-                    </div>
-                </div>
-            </div>
+        <ul class="project-list">
+            <li class="project-entry">
+                <div class="project-title"><a href="https://github.com/ro-hits/TranscribeIt--Whisper/tree/master" target="_blank" rel="noopener">Subtitle Generation using Whisper ASR</a></div>
+                <p class="project-desc">Transcribes videos into timestamped SubRip subtitles using OpenAI's Whisper model. A straightforward CLI tool for making video content accessible.</p>
+                <div class="project-meta">Python · OpenAI · Speech-to-text · NLP · Linux</div>
+            </li>
 
-            <!-- Project Card 4: RAG System -->
-            <div class="portfolio-item reveal" data-category="genai ml">
-                <div class="portfolio-card">
-                    <div class="portfolio-content">
-                        <h3>RAG System from Scratch</h3>
-                        <p>A comprehensive Retrieval-Augmented Generation system built without frameworks. Covers PDF parsing, embedding with FAISS, hybrid search combining BM25 and dense retrieval, cross-encoder reranking, and provider-agnostic LLM generation for accurate, context-grounded answers.</p>
-                        <div class="portfolio-tags">
-                            <span>Python</span>
-                            <span>FAISS</span>
-                            <span>Cross-Encoder</span>
-                            <span>BM25</span>
-                            <span>LLM</span>
-                            <span>NLP</span>
-                        </div>
-                        <a href="#" class="portfolio-link">View Project &rarr;</a>
-                    </div>
-                </div>
-            </div>
+            <li class="project-entry">
+                <div class="project-title"><a href="#">Real-Time Ride-Hailing Analytics</a></div>
+                <p class="project-desc">Simulates a ride-hailing data stream &mdash; pickup/drop-off times, locations, fares &mdash; piped into a processing pipeline for analytics and ML workflows on GCP.</p>
+                <div class="project-meta">Python · ML · Statistics · NumPy · GCP</div>
+            </li>
 
-            <!-- Project Card 5: LLM Fine-Tuning -->
-            <div class="portfolio-item reveal" data-category="genai ml">
-                <div class="portfolio-card">
-                    <div class="portfolio-content">
-                        <h3>Domain-Specific LLM Fine-Tuning</h3>
-                        <p>Fine-tuning large language models using QLoRA for the jewelry domain. Leveraging industry-specific datasets to adapt model behavior for product descriptions, pricing context, and gemstone classification tasks with efficient parameter-efficient training.</p>
-                        <div class="portfolio-tags">
-                            <span>Python</span>
-                            <span>QLoRA</span>
-                            <span>Hugging Face</span>
-                            <span>PEFT</span>
-                            <span>Transformers</span>
-                        </div>
-                        <a href="#" class="portfolio-link">View Project &rarr;</a>
-                    </div>
-                </div>
-            </div>
+            <li class="project-entry">
+                <div class="project-title"><a href="#">Competitive Pricing Intelligence Pipeline</a></div>
+                <p class="project-desc">End-to-end system comparing jewelry prices across 22+ retailers. Uses OpenCLIP embeddings and FinBERT for semantic product matching, with Playwright scraping and category-aware similarity scoring.</p>
+                <div class="project-meta">Python · OpenCLIP · FinBERT · Playwright · FAISS · SerpAPI</div>
+            </li>
 
-            <!-- Project Card 6: Digital Marketing Automation -->
-            <div class="portfolio-item reveal" data-category="data-analysis automation">
-                <div class="portfolio-card">
-                    <div class="portfolio-content">
-                        <h3>Digital Marketing Automation at Scale</h3>
-                        <p>Designed and deployed automated email marketing campaigns reaching 7M+ recipients using the Bluecore platform. Built customer journey maps, segmentation logic, and performance dashboards to optimize engagement and conversion across multiple channels.</p>
-                        <div class="portfolio-tags">
-                            <span>Bluecore</span>
-                            <span>Automation</span>
-                            <span>Analytics</span>
-                            <span>Segmentation</span>
-                            <span>A/B Testing</span>
-                        </div>
-                        <a href="#" class="portfolio-link">View Project &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <li class="project-entry">
+                <div class="project-title"><a href="#">RAG System from Scratch</a></div>
+                <p class="project-desc">Retrieval-Augmented Generation built without frameworks. PDF parsing, FAISS embeddings, hybrid BM25 + dense retrieval, cross-encoder reranking, and provider-agnostic LLM generation.</p>
+                <div class="project-meta">Python · FAISS · Cross-Encoder · BM25 · LLM · NLP</div>
+            </li>
+
+            <li class="project-entry">
+                <div class="project-title"><a href="#">Domain-Specific LLM Fine-Tuning</a></div>
+                <p class="project-desc">Fine-tuning language models with QLoRA for the jewelry domain &mdash; product descriptions, pricing context, and gemstone classification via parameter-efficient training.</p>
+                <div class="project-meta">Python · QLoRA · Hugging Face · PEFT · Transformers</div>
+            </li>
+
+            <li class="project-entry">
+                <div class="project-title"><a href="#">Digital Marketing Automation at Scale</a></div>
+                <p class="project-desc">Automated email campaigns reaching 7M+ recipients on Bluecore. Built segmentation logic, customer journey maps, and performance dashboards to optimize engagement.</p>
+                <div class="project-meta">Bluecore · Automation · Analytics · Segmentation · A/B Testing</div>
+            </li>
+        </ul>
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section">
-    <div class="container">
-        <div class="section-header reveal">
-            <h2>Get In Touch</h2>
-            <div class="underline"></div>
-        </div>
+<!-- Contact -->
+<div class="wrap"><hr class="section-rule"></div>
 
-        <div class="contact-content">
-            <div class="contact-text reveal">
-                <p>Thank you for visiting my portfolio. I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out through any of the channels below.</p>
+<section id="contact" class="contact fade-in">
+    <div class="wrap">
+        <div class="section-label">Contact</div>
+        <p>Always open to new projects, opportunities, or a good conversation about data and systems.</p>
+
+        <div class="contact-links">
+            <div class="contact-row">
+                <span class="label">Email</span>
+                <a href="mailto:rohitsconnect@protonmail.com">rohitsconnect@protonmail.com</a>
             </div>
-
-            <div class="contact-methods reveal">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </div>
-                    <div class="contact-info">
-                        <h3>Email</h3>
-                        <a href="mailto:rohitsconnect@protonmail.com">rohitsconnect@protonmail.com</a>
-                        <p>I typically respond within 24 hours</p>
-                    </div>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </div>
-                    <div class="contact-info">
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/rohit-kp-891236157/" target="_blank" rel="noopener">linkedin.com/in/rohit</a>
-                        <p>Connect with me professionally</p>
-                    </div>
-                </div>
+            <div class="contact-row">
+                <span class="label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/rohit-kp-891236157/" target="_blank" rel="noopener">linkedin.com/in/rohit</a>
             </div>
-
-            <div class="social-links-container reveal">
-                <h3>Find Me On</h3>
-                <div class="social-links">
-                    <a href="https://github.com/ro-hits" target="_blank" rel="noopener" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="https://medium.com/@rohitkp9645" target="_blank" rel="noopener" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                        Medium
-                    </a>
-                    <a href="https://stackoverflow.com/users/22597420/rohit-kp" target="_blank" rel="noopener" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line>
-                        </svg>
-                        Stack Overflow
-                    </a>
-                </div>
+            <div class="contact-row">
+                <span class="label">GitHub</span>
+                <a href="https://github.com/ro-hits" target="_blank" rel="noopener">github.com/ro-hits</a>
+            </div>
+            <div class="contact-row">
+                <span class="label">Medium</span>
+                <a href="https://medium.com/@rohitkp9645" target="_blank" rel="noopener">@rohitkp9645</a>
+            </div>
+            <div class="contact-row">
+                <span class="label">Stack</span>
+                <a href="https://stackoverflow.com/users/22597420/rohit-kp" target="_blank" rel="noopener">stackoverflow.com/rohit-kp</a>
             </div>
         </div>
     </div>
@@ -308,101 +157,78 @@
 
 <!-- Footer -->
 <footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">Rohit</div>
-            <p>Data Engineer &amp; Python Developer</p>
-            <p class="copyright">&copy; 2025 Rohit. All rights reserved.</p>
-        </div>
+    <div class="wrap">
+        <p>&copy; 2025 Rohit. All rights reserved.</p>
     </div>
 </footer>
 
 <script>
-    // ========== DARK MODE ==========
-    const themeToggle = document.getElementById('themeToggle');
+    // Theme
+    const toggle = document.getElementById('themeToggle');
     const root = document.documentElement;
 
-    // Check saved preference or OS preference
-    function getPreferredTheme() {
-        const saved = localStorage.getItem('theme');
-        if (saved) return saved;
+    function getTheme() {
+        const s = localStorage.getItem('theme');
+        if (s) return s;
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
-    function setTheme(theme) {
-        root.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+    function setTheme(t) {
+        root.setAttribute('data-theme', t);
+        localStorage.setItem('theme', t);
     }
 
-    // Apply on load (before paint, ideally)
-    setTheme(getPreferredTheme());
-
-    themeToggle.addEventListener('click', () => {
-        const current = root.getAttribute('data-theme');
-        setTheme(current === 'dark' ? 'light' : 'dark');
+    setTheme(getTheme());
+    toggle.addEventListener('click', () => {
+        setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
     });
 
-    // ========== HAMBURGER MENU ==========
+    // Hamburger
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    const navOverlay = document.getElementById('navOverlay');
+    const navRight = document.getElementById('navRight');
+    const overlay = document.getElementById('navOverlay');
 
     function toggleMenu() {
         hamburger.classList.toggle('open');
-        navLinks.classList.toggle('open');
-        navOverlay.classList.toggle('open');
-        document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+        navRight.classList.toggle('open');
+        overlay.classList.toggle('open');
+        document.body.style.overflow = navRight.classList.contains('open') ? 'hidden' : '';
     }
 
     hamburger.addEventListener('click', toggleMenu);
-    navOverlay.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+    navRight.querySelectorAll('a').forEach(a =>
+        a.addEventListener('click', () => { if (navRight.classList.contains('open')) toggleMenu(); })
+    );
 
-    // Close menu on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks.classList.contains('open')) toggleMenu();
-        });
-    });
-
-    // ========== SCROLL REVEAL ==========
-    const revealElements = document.querySelectorAll('.reveal');
-
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
+    // Fade in
+    const fades = document.querySelectorAll('.fade-in');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                obs.unobserve(e.target);
             }
         });
-    }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px'
-    });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    fades.forEach(el => obs.observe(el));
 
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // ========== ACTIVE NAV LINK ==========
+    // Active nav
     const sections = document.querySelectorAll('section[id]');
-
-    function updateActiveLink() {
-        const scrollY = window.scrollY + 120;
-        sections.forEach(section => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
-            const link = document.querySelector(`.nav-links a[href="#${id}"]`);
-            if (link) {
-                if (scrollY >= top && scrollY < top + height) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
+    function updateNav() {
+        const y = window.scrollY + 100;
+        sections.forEach(s => {
+            const link = document.querySelector(`.nav-right a[href="#${s.id}"]`);
+            if (!link) return;
+            if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
             }
         });
     }
-
-    window.addEventListener('scroll', updateActiveLink, { passive: true });
-    updateActiveLink();
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
 </script>
 
 </body>
