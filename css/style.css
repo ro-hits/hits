@@ -536,6 +536,11 @@ body {
         font-size: 0.95rem;
     }
 
+    /* FIX: z-index lowered from 140 to 90 so it sits BELOW .nav (z-index: 100).
+       Previously the overlay (140) was above .nav (100), which meant .nav-right
+       — despite having z-index: 150 — was trapped inside .nav's stacking context
+       and couldn't receive clicks. The overlay intercepted all taps, so links
+       like vista.html never fired. */
     .nav-overlay {
         position: fixed;
         inset: 0;
@@ -543,7 +548,7 @@ body {
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s;
-        z-index: 140;
+        z-index: 90;
     }
 
     .nav-overlay.open {
@@ -562,6 +567,8 @@ body {
     .hero-row {
         flex-direction: column-reverse;
         text-align: center;
+        align-items: center;
+        /* FIX: centers the profile photo on mobile */
         gap: 1.5rem;
     }
 
