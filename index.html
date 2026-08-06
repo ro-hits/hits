@@ -4,11 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rohit &mdash; ML Engineer &amp; Python Developer</title>
+    <meta name="description"
+        content="Rohit is an ML engineer and Python developer building data pipelines, NLP and generative AI systems, and production ML tooling.">
+    <link rel="canonical" href="/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rohit — ML Engineer & Python Developer">
+    <meta property="og:description"
+        content="Data pipelines, ML systems, and Python tools — turning messy real-world data into things that actually work.">
+    <meta property="og:image" content="images/og-profile.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%235e8c61'/><text x='16' y='24' font-family='Georgia,serif' font-size='21' font-weight='700' fill='%23fafaf8' text-anchor='middle'>R</text></svg>">
+
+    <!-- Applies theme and text size before first paint so there is no flash of the
+         wrong theme. Must stay in <head> and stay render-blocking. -->
+    <script>
+        (function () {
+            var SIZES = [87.5, 100, 112.5, 125, 137.5];
+            try {
+                var t = localStorage.getItem('theme');
+                if (t !== 'dark' && t !== 'light') {
+                    t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
+                document.documentElement.setAttribute('data-theme', t);
+
+                var i = parseInt(localStorage.getItem('textSize'), 10);
+                if (!(i >= 0 && i < SIZES.length)) i = 2;
+                document.documentElement.style.fontSize = SIZES[i] + '%';
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                document.documentElement.style.fontSize = SIZES[2] + '%';
+            }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
-    <title>Rohit &mdash; Python Developer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -54,7 +93,7 @@
                     </div>
                 </div>
                 <div class="hero-photo">
-                    <img src="images/profile.jpg" alt="Rohit">
+                    <img src="images/profile.webp" alt="Rohit" width="150" height="150">
                 </div>
             </div>
         </div>
@@ -208,18 +247,12 @@
         const toggle = document.getElementById('themeToggle');
         const root = document.documentElement;
 
-        function getTheme() {
-            const s = localStorage.getItem('theme');
-            if (s) return s;
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-
+        // The inline <head> script already applied the stored theme; only persist changes here.
         function setTheme(t) {
             root.setAttribute('data-theme', t);
             localStorage.setItem('theme', t);
         }
 
-        setTheme(getTheme());
         toggle.addEventListener('click', () => {
             setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
         });
@@ -241,15 +274,15 @@
             a.addEventListener('click', () => { if (navRight.classList.contains('open')) toggleMenu(); })
         );
 
+        // Kept in sync with the SIZES array in the inline <head> script.
         const SIZES = [87.5, 100, 112.5, 125, 137.5];
-        let sizeIndex = parseInt(localStorage.getItem('textSize') ?? '2');
+        let sizeIndex = parseInt(localStorage.getItem('textSize'), 10);
+        if (!(sizeIndex >= 0 && sizeIndex < SIZES.length)) sizeIndex = 2;
 
         function applySize() {
-            document.documentElement.style.fontSize = SIZES[sizeIndex] + '%';
+            root.style.fontSize = SIZES[sizeIndex] + '%';
             localStorage.setItem('textSize', sizeIndex);
         }
-
-        applySize();
 
         document.getElementById('textSizer').addEventListener('click', e => {
             const btn = e.target.closest('[data-action]');

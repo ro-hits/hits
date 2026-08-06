@@ -4,12 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vista &mdash; Travel Journal by Rohit</title>
+    <meta name="description"
+        content="A photographic travel journal — a scrolling timeline of places that left a mark, from misty mornings to the ridgeline at Kodachadri.">
+    <link rel="canonical" href="/vista.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vista — Travel Journal">
+    <meta property="og:description"
+        content="A trail of footprints through places that left a mark. Each stop is a chapter.">
+    <meta property="og:image" content="images/og-vista.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="theme-color" content="#0c0f0c" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f4f2ed" media="(prefers-color-scheme: light)">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23344E41'/><circle cx='22.5' cy='9.5' r='2.8' fill='%23A3B18A'/><path d='M4 25l7.5-11.5L16 20l3.5-5L28 25z' fill='%23A3B18A'/></svg>">
+
+    <!-- Applies theme before first paint so there is no flash of the wrong theme.
+         Must stay in <head> and stay render-blocking. -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                if (t !== 'dark' && t !== 'light') {
+                    t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+                }
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&family=DM+Serif+Display:ital@0;1&display=swap"
         rel="stylesheet">
-    <title>Vista &mdash; Travel Journal</title>
     <style>
         :root {
             --accent: #588157;
@@ -692,7 +725,7 @@
             </button>
             <div class="nav-links" id="navLinks">
                 <a href="index.html#about">About</a>
-                <a href="index.html#portfolio">Portfolio</a>
+                <a href="index.html#work">Work</a>
                 <a href="vista.html" class="active">Vista</a>
                 <a href="index.html#contact">Contact</a>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -740,9 +773,9 @@
                 caption: "Where it all started. The first frames that made me want to keep shooting.",
                 layout: "trio",
                 photos: [
-                    { src: "images/vista/IMG_3257.JPG", alt: "Silhouette" },
-                    { src: "images/vista/IMG_3258.JPG", alt: "Momentum" },
-                    { src: "images/vista/IMG_3259.JPG", alt: "Symmetry" },
+                    { img: "IMG_3257", alt: "Silhouette" },
+                    { img: "IMG_3258", alt: "Momentum" },
+                    { img: "IMG_3259", alt: "Symmetry" },
                 ]
             },
             {
@@ -750,8 +783,8 @@
                 caption: "Solitude on the open road \u2014 the kind of silence that resets everything.",
                 layout: "duo",
                 photos: [
-                    { src: "images/vista/IMG_3262.JPG", alt: "Solitude" },
-                    { src: "images/vista/IMG_3263.JPG", alt: "Contrast" },
+                    { img: "IMG_3262", alt: "Solitude" },
+                    { img: "IMG_3263", alt: "Contrast" },
                 ]
             },
             {
@@ -759,9 +792,9 @@
                 caption: "The same world looks different when you change where you stand.",
                 layout: "trio",
                 photos: [
-                    { src: "images/vista/IMG_3302.JPG", alt: "Perspective" },
-                    { src: "images/vista/IMG_3303.JPG", alt: "Reflection" },
-                    { src: "images/vista/IMG_3304.JPG", alt: "Texture" },
+                    { img: "IMG_3302", alt: "Perspective" },
+                    { img: "IMG_3303", alt: "Reflection" },
+                    { img: "IMG_3304", alt: "Texture" },
                 ]
             },
             {
@@ -769,8 +802,8 @@
                 caption: "Mornings wrapped in fog, where the landscape reveals itself slowly.",
                 layout: "duo",
                 photos: [
-                    { src: "images/vista/IMG_3325.JPG", alt: "Depth" },
-                    { src: "images/vista/IMG_3330.JPG", alt: "Atmosphere" },
+                    { img: "IMG_3325", alt: "Depth" },
+                    { img: "IMG_3330", alt: "Dark doorway opening onto a sunlit green courtyard" },
                 ]
             },
             {
@@ -778,9 +811,9 @@
                 caption: "That brief window when the light does all the heavy lifting.",
                 layout: "trio",
                 photos: [
-                    { src: "images/vista/IMG_3363.JPG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_3374.JPG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_3415.JPG", alt: "Fragment" },
+                    { img: "IMG_3363", alt: "White palace arcade beneath a stepped yellow tower" },
+                    { img: "IMG_3374", alt: "Temple gopuram against an orange sunset, crowds on the lawn below" },
+                    { img: "IMG_3415", alt: "Fragment" },
                 ]
             },
             {
@@ -788,8 +821,8 @@
                 caption: "Climbing for the view \u2014 and the feeling that comes with it.",
                 layout: "duo",
                 photos: [
-                    { src: "images/vista/IMG_3820.JPG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_3821.JPG", alt: "Atmosphere" },
+                    { img: "IMG_3820", alt: "Shaft of daylight falling through a cave mouth onto two seated figures" },
+                    { img: "IMG_3821", alt: "Beam of light and dust inside a cavern, figures dwarfed by the rock" },
                 ]
             },
             {
@@ -797,8 +830,8 @@
                 caption: "Patterns in nature, patterns in movement. You start seeing them everywhere.",
                 layout: "duo",
                 photos: [
-                    { src: "images/vista/IMG_3954.JPG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_3976.JPG", alt: "Rhythm" },
+                    { img: "IMG_3954", alt: "Coconut palms receding into morning mist over flooded paddy fields" },
+                    { img: "IMG_3976", alt: "Rhythm" },
                 ]
             },
             {
@@ -806,10 +839,10 @@
                 caption: "Unfamiliar ground. That uneasy excitement of not knowing what\u2019s around the next bend.",
                 layout: "quad",
                 photos: [
-                    { src: "images/vista/IMG_4107.JPEG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_4108.JPEG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_4117.JPEG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_4209.JPEG", alt: "Atmosphere" },
+                    { img: "IMG_4107", alt: "Narrow alley between yellow and red walls opening toward the sea" },
+                    { img: "IMG_4108", alt: "Sea and palm trees framed by a stone window in a dark wall" },
+                    { img: "IMG_4117", alt: "Turquoise surf breaking on rocks below a cliff-top view" },
+                    { img: "IMG_4209", alt: "Violet dusk over the sea above a rock breakwater" },
                 ]
             },
             {
@@ -817,10 +850,10 @@
                 caption: "Space to breathe. The kind of emptiness that feels full.",
                 layout: "quad",
                 photos: [
-                    { src: "images/vista/IMG_4228.JPEG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_4241.JPEG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_4267.JPEG", alt: "Atmosphere" },
-                    { src: "images/vista/IMG_4679.JPEG", alt: "Atmosphere" },
+                    { img: "IMG_4228", alt: "Spiky green fronds reaching into a clear blue sky" },
+                    { img: "IMG_4241", alt: "A runner on the beach framed between two palm trunks" },
+                    { img: "IMG_4267", alt: "Panned black-and-white shot of a train pulling through a station at night" },
+                    { img: "IMG_4679", alt: "Star field above the peak of a yellow tent" },
                 ]
             },
             {
@@ -828,7 +861,7 @@
                 caption: "The last frames of the day. When everything turns soft and unhurried.",
                 layout: "single",
                 photos: [
-                    { src: "images/vista/IMG_4639.JPEG", alt: "Atmosphere" },
+                    { img: "IMG_4693", alt: "Stars over a lit roadside cliff at night" },
                 ]
             },
             {
@@ -836,10 +869,16 @@
                 caption: "The wind and you. Standing above the clouds at the edge of the Western Ghats.",
                 layout: "single",
                 photos: [
-                    { src: "images/vista/kodachadri.jpg", alt: "The wind and you" },
+                    { img: "kodachadri", alt: "The wind and you" },
                 ]
             },
         ];
+
+        // Photos are referenced by bare name above. Both tiers are generated by
+        // scripts/optimize-images.sh from the originals in images/vista/:
+        //   grid/ ~1000px for the timeline, full/ ~2200px for the lightbox.
+        const gridSrc = name => `images/vista/grid/${name}.webp`;
+        const fullSrc = name => `images/vista/full/${name}.webp`;
 
         const allPhotos = [];
 
@@ -850,10 +889,12 @@
                 const entry = document.createElement('div');
                 entry.className = `tl-entry ${side}`;
                 const photoStart = allPhotos.length;
-                trip.photos.forEach(p => allPhotos.push(p));
+                // The lightbox pages across every photo in the journal, so it reads
+                // from this flat list rather than from the individual entries.
+                trip.photos.forEach(p => allPhotos.push({ src: fullSrc(p.img), alt: p.alt }));
                 const photosHTML = trip.photos.map((p, j) =>
                     `<div class="tl-photo" data-index="${photoStart + j}">
-                    <img src="${p.src}" alt="${p.alt}" loading="lazy">
+                    <img src="${gridSrc(p.img)}" alt="${p.alt}" loading="lazy" decoding="async">
                 </div>`
                 ).join('');
                 const dateHTML = trip.date ? `<div class="tl-date">${trip.date}</div>` : '';
@@ -914,13 +955,8 @@
 
         const themeToggle = document.getElementById('themeToggle');
         const root = document.documentElement;
-        function getTheme() {
-            const saved = localStorage.getItem('theme');
-            if (saved) return saved;
-            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-        }
+        // The inline <head> script already applied the stored theme; only persist changes here.
         function setTheme(t) { root.setAttribute('data-theme', t); localStorage.setItem('theme', t); }
-        setTheme(getTheme());
         themeToggle.addEventListener('click', () => {
             setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
         });

@@ -1,0 +1,18 @@
+# Files Wrangler must NOT publish. Same syntax as .gitignore; read from the root
+# of the assets directory, which wrangler.json sets to "./".
+#
+# The site serves only the WebP derivatives in images/vista/{grid,full}/ plus
+# images/profile.webp and images/og-*.jpg. The full-resolution originals stay in
+# the repo as encoder inputs but must not be served: they are ~124 MB the site
+# never requests, and 11 of them carry GPS coordinates in their EXIF.
+images/vista/*.JPG
+images/vista/*.JPEG
+images/vista/*.jpg
+images/vista/*.jpeg
+images/profile.jpg
+
+# Tooling and config, not site content.
+scripts/
+wrangler.json
+.gitignore
+.git/
